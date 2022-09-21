@@ -60,8 +60,10 @@ class Human(Player):
             except ValueError:
                 print("Invalid input, choose again.")
                 continue
-
-            if place_number in TTTobject.occupied:
+            
+            if place_number > 8 or place_number < 0:
+                print("Invalid input, choose again.")
+            elif place_number in TTTobject.occupied:
                 print("Occupied, choose again.")
             else:
                 validity = False
