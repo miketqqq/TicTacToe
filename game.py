@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import TicTacToe as tic
 import random
 
