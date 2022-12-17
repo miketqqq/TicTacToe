@@ -4,9 +4,8 @@ import random
 def game():
     human = tic.Human("o")
     computer = tic.Computer("x")
-    state = [" "] * 9
-    occupied = set()
-    ttt = tic.TicTacToe(state, occupied)
+
+    ttt = tic.TicTacToe(state=[" "]*9, occupied=set())
         
     checking_dict = {"human_move": random.randint(0,1), "win": False}
 

@@ -38,11 +38,10 @@ class Player:
         self.symbol = symbol
     
 class Computer(Player):
-    def __init__(self, symbol):
+    def __init__(self, symbol: str):
         super().__init__(symbol)
 
-    def action(self, Tic_object):
-        '''Tic_object here refers to TicTacToe object'''
+    def action(self, Tic_object:TicTacToe):
         place_number = 4
         while place_number in Tic_object.occupied:
             place_number = random.randint(0,8) 
@@ -50,10 +49,10 @@ class Computer(Player):
         
 
 class Human(Player):
-    def __init__(self, symbol):
+    def __init__(self, symbol: str):
         super().__init__(symbol)
     
-    def action(self, Tic_object):        
+    def action(self, Tic_object:TicTacToe):        
         validity = True
         while validity:
             input_value = input("Choose a spot (1-9):")
